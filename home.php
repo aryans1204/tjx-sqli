@@ -11,7 +11,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <link rel="styelseheet" type="text/css" href="styles.css">
         </head>
         <body>
-            <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
+            <h1>Hello, <?php echo $_SESSION['user_name']; ?></h1>
             <a href="logout.php">Logout</a>
         </body>
     </html>
