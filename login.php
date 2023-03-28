@@ -28,12 +28,12 @@ if(mysqli_num_rows($result) === 1) {
         exit();
     }
     else {
-        header("Location: index.php?error=Invalid username or password");
+        header("Location: index.php?error=Invaliddd username or password");
         exit();
     }
 }
 else {
-    header("Location: index.php");
+    header("Location: index.php?error=Invalid username or password");
     exit();
 }
 ?>

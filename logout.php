@@ -2,7 +2,7 @@
 session_start();
 
 session_unset();
-session_destory();
+session_destroy();
 
 header("Location: index.php");
 
