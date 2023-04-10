@@ -13,7 +13,7 @@ else if(empty($pass)) {
     header("Location: index.php?error=Password is required");
     exit();
 }
-$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+$sql = "SELECT * FROM users WHERE user_name='$_POST['uname']' AND password='$_POST['password]'";
 
 $result = mysqli_query($conn, $sql);
 
