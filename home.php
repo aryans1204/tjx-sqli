@@ -12,10 +12,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </head>
         <body>
             <h1>Hello, <?php echo $_SESSION['user_name']; ?></h1>
-<<<<<<< HEAD
             <h2>Your credit card number is 4000 0000 0000 0000 </h2>
-=======
->>>>>>> 6ab18f612a611d5c287b6f3484813e1cdf53a030
             <a href="logout.php">Logout</a>
         </body>
     </html>
