@@ -13,9 +13,11 @@ else if(empty($pass)) {
     header("Location: index.php?error=Password is required");
     exit();
 }
-$sql = "SELECT * FROM users WHERE user_name LIKE '$uname' AND password='$pass'";
+function fetchData($uname, $pass, $conn) {
+    $sql = "SELECT * FROM users WHERE user_name LIKE '$uname' AND password='$pass'";
+    $result = mysqli_query($conn, $sql);
+}
 
-$result = mysqli_query($conn, $sql);
 if(mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
     echo "Logged in";
