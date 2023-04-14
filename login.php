@@ -13,10 +13,9 @@ else if(empty($pass)) {
     header("Location: index.php?error=Password is required");
     exit();
 }
-$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+$sql = "SELECT * FROM users WHERE user_name LIKE '$uname' AND password='$pass'";
 
 $result = mysqli_query($conn, $sql);
-
 if(mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
     echo "Logged in";
@@ -25,6 +24,10 @@ if(mysqli_num_rows($result) === 1) {
     $_SESSION['id'] = $row['id'];
     header("Location: home.php");
     exit();
+}
+else if (mysqli_num_rows($result) > 1) {
+    $row = mysqli_fetch_assoc($result);
+    print_r($row);
 }
 else {
     header("Location: index.php?error=Invalid username or password");
