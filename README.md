@@ -1,2 +1,2 @@
 # tjx-sqli
-A PHP web server for penetration testing againt SQL Injection ttacks
+A PHP web server for penetration testing against SQL Injection attacks
